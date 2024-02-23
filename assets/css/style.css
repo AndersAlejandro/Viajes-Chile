@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.icon {
+    height: 40px;
+    background-color: hsl(197, 80%, 61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.caja-central {
+    background-color: #000000;
+
+}
