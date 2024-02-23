@@ -21,11 +21,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Sweetalert2 -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css
+    " rel="stylesheet">
+
 
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -38,16 +46,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active text-light" aria-current="page" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Quienes Somos</a>
+                        <a class="nav-link text-light d-none d-md-block" href="#quienes-somos">Quienes Somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Destacados</a>
+                        <a class="nav-link text-light" href="#destacados">Destacados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Contacto</a>
+                        <a class="nav-link text-light" href="#contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +64,7 @@
 
     <!-- Hero Section -->
 
-    <section>
+    <section id="inicio">
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -82,7 +90,7 @@
 
     <!-- Main Content -->
 
-    <section class="caja-central">
+    <section id="quienes-somos" class="caja-negra">
         <div class="container">
             <div class="row py-5">
                 <h2 class="text-center text-light pb-4 d-none d-md-block">¿QUIÉNES SOMOS?</h2>
@@ -139,11 +147,12 @@
         </div>
     </section>
 
-    <section class="caja-central">
+    <section id="destacados" class="caja-negra">
         <div class="container">
             <h2 class="text-center text-light pb-4">Destacados</h2>
             <div class="row">
-                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center" data-toggle="tooltip"
+                    title="Montañas y lago">
                     <div class="card text-light" style="width: 20rem;">
                         <img src="assets/img/card1.jpg" class="card-img-top" alt="Card-1">
                         <div class="card-body">
@@ -154,29 +163,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center" data-toggle="tooltip"
+                    title="Cerros al lado de un lago">
                     <div class="card text-light" style="width: 20rem;">
                         <img src="assets/img/card2.jpg" class="card-img-top" alt="Card-2">
                         <div class="card-body">
-                            <h5 class="card-title">Consectetur adipisicing elit</h5>
+                            <h5 class="card-title">Consectetur adipisicing elit</a></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quidem
                                 ipsum architecto quasi facere dolor incidunt impedit quia placeat totam asperiores ab
                                 nulla officia, at optio beatae sunt doloribus! Saepe.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center" data-toggle="tooltip"
+                    title="Zona rocosa">
                     <div class="card text-light" style="width: 20rem;">
                         <img src="assets/img/card3.jpg" class="card-img-top" alt="Card-3">
                         <div class="card-body">
-                            <h5 class="card-title">Sed do eiusmod tempor</h5>
+                            <h5 class="card-title" data-toggle="tooltip" title="Lorem do tempor">Sed do eiusmod tempor
+                            </h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quidem
                                 ipsum architecto quasi facere dolor incidunt impedit quia placeat totam asperiores ab
                                 nulla officia, at optio beatae sunt doloribus! Saepe.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="col-12 col-lg-3 mb-4 d-flex justify-content-center" data-toggle="tooltip" title="Bosque">
                     <div class="card text-light" style="width: 20rem;">
                         <img src="assets/img/card4.jpg" class="card-img-top" alt="Card-4">
                         <div class="card-body">
@@ -191,7 +203,7 @@
         </div>
     </section>
 
-    <section class="caja-central">
+    <section id="contacto" class="caja-negra">
         <div class="container">
             <h3 class="text-center text-light py-5">CONTACTO</h3>
             <hr>
@@ -208,7 +220,7 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary boton mb-5 my-3">Enviar</button>
+            <button id="miBoton" type="submit" class="btn btn-primary boton mb-5 my-3">Enviar</button>
         </div>
         </div>
     </section>
@@ -230,12 +242,6 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
